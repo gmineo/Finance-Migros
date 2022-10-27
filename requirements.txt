@@ -4,7 +4,7 @@ datetime
 
 datetime
 requests
-json
+
 numpy
 pandas
 oandapyV20
