@@ -23,7 +23,10 @@ import datetime
 from datetime import date
 today=date.today()
 
-
+# Project Details
+st.title("SIGNAL XCU")
+st.header("PROVA")
+st.sidebar.header("from oanda")
 
 def segnale_xcu (initial, final):
   a=initial
