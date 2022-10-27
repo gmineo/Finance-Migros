@@ -110,9 +110,7 @@ for line in r.iter_lines():
         price=(price_bid+price_ask)/2
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
-        if sig=='BUY': print('\r {:>1}'.format(time),'{:>20}'.format(price), '\x1b[4;30;43m'+'  --->{:>5}'.format(sig) + '\x1b[0m','   <---> delta: {:>3}'.format(delta_price),end='')
-        if sig=='SELL': print('\r {:>1}'.format(time),'{:>20}'.format(price), '\x1b[4;37;41m'+'  --->{:>5}'.format(sig) + '\x1b[0m','   <---> delta: {:>3}'.format(delta_price),end='')
-    
+        st.write(price)
         time.sleep(1)
   except:
     pass # doing nothing on exception
@@ -145,7 +143,7 @@ microsoft = finance.download("MSFT", start=start, end=end)
 data1 = company1.history(period="3mo")
 data2 = company2.history(period="3mo")
 
-data1
+company1
 
 # markdown syntax
 st.write("""
