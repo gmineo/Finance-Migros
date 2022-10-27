@@ -110,7 +110,7 @@ for line in r.iter_lines():
         price=(price_bid+price_ask)/2
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
-        st.write(price)
+        st.write(price, sig)
         time.sleep(1)
   except:
     pass # doing nothing on exception
