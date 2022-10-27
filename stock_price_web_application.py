@@ -21,6 +21,8 @@ import oandapyV20
 import oandapyV20.endpoints.instruments as instruments
 import datetime 
 from datetime import date
+import streamlit as st
+import yfinance as finance
 today=date.today()
 
 # Project Details
