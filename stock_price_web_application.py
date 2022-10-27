@@ -132,11 +132,6 @@ from datetime import date
 start = datetime.date(year=2022, month=5, day=20)
 end=date.today()
 
-# Project Details
-st.title("Build and Deploy Stock Market App Using Streamlit")
-st.header("A Basic Data Science Web Application")
-st.sidebar.header("Geeksforgeeks \n TrueGeeks")
-
 company1 = get_ticker("GOOGL")
 company2 = get_ticker("MSFT")
 
