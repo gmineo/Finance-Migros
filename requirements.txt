@@ -1,3 +1,11 @@
 streamlit
 yfinance
 datetime
+sys
+datetime
+requests
+json
+numpy
+pandas
+oandapyV20
+oandapyV20.endpoints.instruments
