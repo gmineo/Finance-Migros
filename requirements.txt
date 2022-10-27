@@ -8,4 +8,4 @@ requests
 numpy
 pandas
 oandapyV20
-oandapyV20.endpoints.instruments
+
