@@ -115,7 +115,7 @@ for line in r.iter_lines():
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
         st.write('\r {:>1}'.format(time), price,  ' --->', sig , 'delta: ', delta_price, end='')
-        st.markdown(f'<h1 style="color:#33ff33;font-size:24px;">{"ColorMeBlue text”"}</h1>', unsafe_allow_html=True)
+        st.markdown(f'<h1 style="color:#33ff33;font-size:24px;">{price}</h1>', unsafe_allow_html=True)
         #time.sleep(1)
   except:
     pass # doing nothing on exception
