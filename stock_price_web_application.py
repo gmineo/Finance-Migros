@@ -26,8 +26,12 @@ import yfinance as finance
 today=date.today()
 
 # Project Details
-st.title("SIGNAL XCU")
+st.title("SIGNAL")
 st.header("PROVA")
+# markdown syntax
+st.write("""
+### XCU
+""")
 st.sidebar.header("from oanda")
 
 def segnale_xcu (initial, final):
@@ -110,7 +114,7 @@ for line in r.iter_lines():
         price=(price_bid+price_ask)/2
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
-        st.write(price, sig, delta_price)
+        st.write(price,  ' --->', sig, delta_price)
         time.sleep(1)
   except:
     pass # doing nothing on exception
@@ -118,48 +122,4 @@ for line in r.iter_lines():
 
 
 
-
-import streamlit as st
-import yfinance as finance
-
-def get_ticker(name):
-	company = finance.Ticker(name) # google
-	return company
-
-import datetime
-from datetime import date
-
-start = datetime.date(year=2022, month=5, day=20)
-end=date.today()
-
-company1 = get_ticker("GOOGL")
-company2 = get_ticker("MSFT")
-
-# fetches the data: Open, Close, High, Low and Volume
-google = finance.download("GOOGL", start=start, end=end)
-microsoft = finance.download("MSFT", start=start, end=end)
-
-# Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
-data1 = company1.history(period="3mo")
-data2 = company2.history(period="3mo")
-
-company1
-
-# markdown syntax
-st.write("""
-### Google
-""")
-
-# detailed summary on Google
-st.write(company1.info['longBusinessSummary'])
-st.write(google)
-
-# plots the graph
-st.line_chart(data1.values)
-
-st.write("""
-### Microsoft
-""")
-st.write(company2.info['longBusinessSummary'], "\n", microsoft)
-st.line_chart(data2.values)
 
