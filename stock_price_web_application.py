@@ -114,7 +114,7 @@ for line in r.iter_lines():
         price=(price_bid+price_ask)/2
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
-        st.write('\r {:>1}'.format(time), price,  ' --->', '\x1b[4;30;43m' + sig + '\x1b[0m','<---  ', 'delta: ', delta_price, end='')
+        st.write('\r {:>1}'.format(time), price,  ' --->', color:Green, sig , 'delta: ', delta_price, end='')
         time.sleep(1)
   except:
     pass # doing nothing on exception
