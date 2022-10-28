@@ -114,9 +114,9 @@ for line in r.iter_lines():
         price=(price_bid+price_ask)/2
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
-        st.write(time, '     ',price, '     delta: ', delta_price, ' --->', f'<br style="color:#008400;font-size:15px;">{sig}</br>' ,  unsafe_allow_html=True)
+        #st.write(time, '     ',price, '     delta: ', delta_price, ' --->', f'<br style="color:#008400;font-size:15px;">{sig}</br>' ,  unsafe_allow_html=True)
         #st.markdown(f'{time}, <h1 style="color:#008400;font-size:15px;">{sig}</h1>', unsafe_allow_html=True)
-        st.write(f'<b {time}, '     ',{price}, '     delta: ', {delta_price}, ' --->', style="color:#008400;font-size:15px;">{sig}</b>' ,  unsafe_allow_html=True)
+        st.write(f'<b {time}, {price}, 'delta: ', {delta_price}, ' --->', style="color:#008400;font-size:15px;">{sig}</b>' ,  unsafe_allow_html=True)
         
   except:
     pass # doing nothing on exception
