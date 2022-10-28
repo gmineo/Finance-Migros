@@ -114,7 +114,7 @@ for line in r.iter_lines():
         price=(price_bid+price_ask)/2
         sig=segnale_xcu(price_ini,price)
         delta_price= ((price/price_ini)-1)*100
-        st.write(time, price,  ' --->', f'<h1 style="color:#008400;font-size:15px;">{sig}</h1>' , ' delta: ', delta_price, unsafe_allow_html=True)
+        st.write(time, price,  ' --->', f'<p style="color:#008400;font-size:15px;">{sig}</p>' , ' delta: ', delta_price, unsafe_allow_html=True)
         #st.markdown(f'{time}, <h1 style="color:#008400;font-size:15px;">{sig}</h1>', unsafe_allow_html=True)
         
   except:
